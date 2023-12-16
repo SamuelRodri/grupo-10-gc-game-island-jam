@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public int totalPoints;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,11 @@ public class GameController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddPoints(int points)
+    {
+        totalPoints += points;
+        Debug.Log($"Ahora tienes {totalPoints} puntos");
     }
 }
