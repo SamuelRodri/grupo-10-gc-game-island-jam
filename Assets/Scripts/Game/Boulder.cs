@@ -13,6 +13,8 @@ public class Stone : MonoBehaviour
     private Rigidbody2D rb;
     private GameController gameController;
 
+    public Sprite downSprite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,11 @@ public class Stone : MonoBehaviour
 
             if (pushPower > 0)
                 pushPower -= Time.deltaTime * cooldownPower;
+        }
+
+        if(gameController.gameMode.Equals(GameMode.leaving))
+        {
+            GetComponent<SpriteRenderer>().sprite = downSprite;
         }
     }
 }
