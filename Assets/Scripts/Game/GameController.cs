@@ -12,10 +12,12 @@ public enum GameMode
 public class GameController : MonoBehaviour
 {
     public int totalPoints;
-
     public TMP_Text pointsText;
-
     public GameMode gameMode = GameMode.pushing;
+
+    // Camera
+    public float shakeDuration = 0.3f;
+    public float shakeStrength = 0.3f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,13 @@ public class GameController : MonoBehaviour
         {
             gameMode = GameMode.leaving;
         }
+    }
+
+    public void DestroyElement(DestructibleObject destructible)
+    {
+        AddPoints(destructible.points);
+        CameraShake.Shake(shakeDuration, shakeStrength);
+        Destroy(destructible.gameObject);
     }
 
     public void AddPoints(int points)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestructibleObject : MonoBehaviour
 {
-    [SerializeField] private int points;
+    public int points;
 
     private GameController gameController;
 
@@ -24,8 +24,7 @@ public class DestructibleObject : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Boulder"))
         {
-            gameController.AddPoints(points);
-            Destroy(gameObject);
+            gameController.DestroyElement(this);
         }
     }
 }
