@@ -35,6 +35,7 @@ public class DestructibleObject : MonoBehaviour
 
     public void Destroy()
     {
+        explosion.StartExplosion();
         gameObject.GetComponent<SpriteRenderer>().sprite = brokenVersion;
     }
 }
