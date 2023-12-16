@@ -6,7 +6,6 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Stone : MonoBehaviour
 {
-    public float speed;
     public float pushPower = 0;
     public float stepPower = 100;
     public float cooldownPower = 5;
@@ -31,7 +30,6 @@ public class Stone : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 pushPower += stepPower;
-                Debug.Log("hola");
             }
 
             if (pushPower > 0)
