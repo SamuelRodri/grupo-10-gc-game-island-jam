@@ -6,7 +6,7 @@ using UnityEngine;
 
 public enum GameMode
 {
-    pushing, leaving
+    pushing, leaving, none
 }
 
 public class GameController : MonoBehaviour
@@ -14,8 +14,9 @@ public class GameController : MonoBehaviour
     public int totalPoints;
     public TMP_Text pointsText;
     public TMP_Text timerText;
-    public GameMode gameMode = GameMode.pushing;
+    public GameMode gameMode = GameMode.none;
     private bool pushStarted = false;
+    public Stone boulder;
 
     // Camera
     public float shakeDuration = 0.3f;
@@ -45,6 +46,8 @@ public class GameController : MonoBehaviour
         {
             if (!pushStarted)
             {
+                gameMode = GameMode.pushing;
+                boulder.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                 pushStarted = true;
                 StartCoroutine("CountDown");
             }

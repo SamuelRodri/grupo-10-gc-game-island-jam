@@ -10,6 +10,9 @@ public class Sisyphus : MonoBehaviour
     private Vector3 distanceBoulder;
     private Vector3 posicionOriginal;
 
+    public bool isPushing = false;
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,12 @@ public class Sisyphus : MonoBehaviour
     {
         if (gameController.gameMode.Equals(GameMode.pushing))
         {
+            if (!isPushing)
+            {
+                animator.SetBool("Pushing", true);
+                isPushing = true;
+            }
+
             transform.position = boulder.transform.position - distanceBoulder;
         }
     }
