@@ -11,6 +11,7 @@ public class Sisyphus : MonoBehaviour
     private Vector3 posicionOriginal;
 
     public bool isPushing = false;
+    public bool isStoped = false;
     public Animator animator;
 
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class Sisyphus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameController.gameMode.Equals(GameMode.pushing))
+        if (gameController.gameMode.Equals(GameMode.pushing) && !isStoped)
         {
             if (!isPushing)
             {
@@ -32,6 +33,20 @@ public class Sisyphus : MonoBehaviour
             }
 
             transform.position = boulder.transform.position - distanceBoulder;
+        }
+
+        if (gameController.gameMode.Equals(GameMode.leaving))
+        {
+            animator.SetBool("Droped", true);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag.Equals("Limit"))
+        {
+            isStoped = true;
+            animator.SetBool("Droped", true);
         }
     }
 }
