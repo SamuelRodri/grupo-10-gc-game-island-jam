@@ -60,7 +60,7 @@ public class GameController : MonoBehaviour
     {
         AddPoints(destructible.points);
         CameraShake.Shake(shakeDuration, shakeStrength);
-        Destroy(destructible.gameObject);
+        destructible.Destroy();
     }
 
     public void AddPoints(int points)
