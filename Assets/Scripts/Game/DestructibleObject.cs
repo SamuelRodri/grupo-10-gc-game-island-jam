@@ -24,7 +24,6 @@ public class DestructibleObject : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Boulder"))
         {
-            Debug.Log($"GANAS {points} PUNTOS");
             gameController.AddPoints(points);
             Destroy(gameObject);
         }
