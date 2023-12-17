@@ -3,18 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Boulder
+  - Limit
+  - Hill
+  - Destructible
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Env
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Other
+  - Sisyphus
+  - Boulder
+  - Extra
   - 
   - 
   - 
