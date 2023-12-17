@@ -10,6 +10,8 @@ public class Stone : MonoBehaviour
     public float stepPower = 100;
     public float cooldownPower = 5;
 
+    public float maxVelocity = 10;
+
     private Rigidbody2D rb;
     private GameController gameController;
 
@@ -38,6 +40,8 @@ public class Stone : MonoBehaviour
 
             if (pushPower > 0)
                 pushPower -= Time.deltaTime * cooldownPower;
+
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxVelocity);
         }
 
         if(gameController.gameMode.Equals(GameMode.leaving))

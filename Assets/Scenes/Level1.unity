@@ -1423,8 +1423,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushPower: 0
-  stepPower: 50
-  cooldownPower: 100
+  stepPower: 28.2
+  cooldownPower: 10
+  maxVelocity: 2
   downSprite: {fileID: 21300000, guid: 4aa09715ac6e72540bcd365520011ec7, type: 3}
 --- !u!82 &714517570
 AudioSource:
@@ -1593,7 +1594,7 @@ Transform:
   m_GameObject: {fileID: 788493452}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.84, y: 0.15, z: 0.010149736}
+  m_LocalPosition: {x: -7.754, y: 0.102, z: 0.010149736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
