@@ -29,11 +29,15 @@ public class GameController : MonoBehaviour
     // Scene
     public GameObject gameOverPanel;
 
+    private void Awake()
+    {
+        var audio = GameObject.Find("Audio Manager");
+        Destroy(audio);
+    }
     // Start is called before the first frame update
     void Start()
     {
         pointsText.text = totalPoints.ToString();
-        timerText.text = "";
         timer = pushTime;
     }
 

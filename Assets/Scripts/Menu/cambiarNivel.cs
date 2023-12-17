@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class cambiarNivel : MonoBehaviour
 {
     public void CambiarEscena(string nombre) {
+        if(nombre == "Level1")
+        {
+            Debug.Log("hola");
+            var audio = FindObjectOfType<AudioManager>();
+            Destroy(audio);
+        }
         SceneManager.LoadScene(nombre);
     }
 
