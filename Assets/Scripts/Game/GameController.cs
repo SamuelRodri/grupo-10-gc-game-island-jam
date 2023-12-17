@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public enum GameMode
@@ -59,6 +60,11 @@ public class GameController : MonoBehaviour
                 pushStarted = true;
                 StartCoroutine("CountDown");
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Menu");
         }
 
         if (timer == 0) gameMode = GameMode.leaving;
