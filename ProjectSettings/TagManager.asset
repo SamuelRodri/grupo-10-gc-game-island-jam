@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Boulder
   - Limit
+  - Hill
   layers:
   - Default
   - TransparentFX

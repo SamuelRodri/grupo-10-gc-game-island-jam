@@ -48,5 +48,10 @@ public class Sisyphus : MonoBehaviour
             isStoped = true;
             animator.SetBool("Lost", true);
         }
+
+        if (collision.tag.Equals("Hill"))
+        {
+            animator.SetBool("Hill", true);
+        }
     }
 }
