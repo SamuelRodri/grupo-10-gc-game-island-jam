@@ -44,6 +44,7 @@ public class Stone : MonoBehaviour
                 pushPower -= Time.deltaTime * cooldownPower;
 
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxVelocity);
+
         }
 
         if(gameController.gameMode.Equals(GameMode.leaving))
@@ -65,9 +66,16 @@ public class Stone : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Hill"))
+        {
+            rb.AddForce(new Vector2(-1, 0.1f) * pushPower * Time.deltaTime, ForceMode2D.Impulse);
+        }
+    }
+
     public void SetDrag()
     {
         rb.drag = drag;
-        Debug.Log(rb.drag);
     }
 }
