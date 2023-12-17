@@ -12,6 +12,8 @@ public class DestructibleObject : MonoBehaviour
 
     public Explosion explosion;
 
+    public AudioSource screamings;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,7 @@ public class DestructibleObject : MonoBehaviour
     public void Destroy()
     {
         explosion.StartExplosion();
+        screamings.Play();
         gameObject.GetComponent<SpriteRenderer>().sprite = brokenVersion;
     }
 }
