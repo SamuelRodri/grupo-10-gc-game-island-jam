@@ -46,7 +46,7 @@ public class Sisyphus : MonoBehaviour
         if (collision.tag.Equals("Limit"))
         {
             isStoped = true;
-            animator.SetBool("Droped", true);
+            animator.SetBool("Lost", true);
         }
     }
 }
