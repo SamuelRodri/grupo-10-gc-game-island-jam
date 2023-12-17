@@ -48,6 +48,7 @@ public class GameController : MonoBehaviour
             {
                 gameMode = GameMode.pushing;
                 boulder.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                boulder.SetDrag();
                 pushStarted = true;
                 StartCoroutine("CountDown");
             }

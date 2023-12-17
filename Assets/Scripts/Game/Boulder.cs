@@ -18,6 +18,8 @@ public class Stone : MonoBehaviour
     public Sprite downSprite;
     private AudioSource impactSound;
 
+    public float drag;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,5 +58,11 @@ public class Stone : MonoBehaviour
         {
             impactSound.Play();
         }
+    }
+
+    public void SetDrag()
+    {
+        rb.drag = drag;
+        Debug.Log(rb.drag);
     }
 }
