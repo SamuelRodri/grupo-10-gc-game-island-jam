@@ -14,12 +14,14 @@ public class Stone : MonoBehaviour
     private GameController gameController;
 
     public Sprite downSprite;
+    private AudioSource impactSound;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         gameController = FindObjectOfType<GameController>();
+        impactSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -41,6 +43,14 @@ public class Stone : MonoBehaviour
         if(gameController.gameMode.Equals(GameMode.leaving))
         {
             GetComponent<SpriteRenderer>().sprite = downSprite;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Destructible"))
+        {
+            impactSound.Play();
         }
     }
 }
