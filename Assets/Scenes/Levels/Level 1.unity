@@ -224,7 +224,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5278fd78068875c4e882b6428f387585, type: 3}
-  m_Color: {r: 0.9607843, g: 0.68235296, b: 0.36862746, a: 1}
+  m_Color: {r: 0.8396226, g: 0.57332593, b: 0.2732734, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1192,7 +1192,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 80cf624bd8250694fa70bf4bc0f0682e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d57066ad22837e419c24d030a2fffaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1212,8 +1212,8 @@ Transform:
   m_GameObject: {fileID: 714517564}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.066339456, w: 0.99779713}
-  m_LocalPosition: {x: -4.587, y: -2.536, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: -4.556, y: -2.516, z: 0}
+  m_LocalScale: {x: 0.047362782, y: 0.047362782, z: 0.047362782}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1250,9 +1250,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06793438, y: -0.06679992}
+  m_Offset: {x: -0.039575018, y: -0.070587665}
   serializedVersion: 2
-  m_Radius: 2.4553626
+  m_Radius: 4.830418
 --- !u!50 &714517568
 Rigidbody2D:
   serializedVersion: 4
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   pushPower: 0
   stepPower: 50
   cooldownPower: 100
-  downSprite: {fileID: 21300000, guid: df02ac1c3b96c6147aa6054221e08b05, type: 3}
+  downSprite: {fileID: 21300000, guid: 4aa09715ac6e72540bcd365520011ec7, type: 3}
 --- !u!82 &714517570
 AudioSource:
   m_ObjectHideFlags: 0

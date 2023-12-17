@@ -7,6 +7,7 @@ TagManager:
   - Boulder
   - Limit
   - Hill
+  - Destructible
   layers:
   - Default
   - TransparentFX
