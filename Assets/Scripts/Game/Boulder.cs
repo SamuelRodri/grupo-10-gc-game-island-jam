@@ -58,6 +58,11 @@ public class Stone : MonoBehaviour
         {
             impactSound.Play();
         }
+
+        if (collision.gameObject.tag.Equals("GameOver"))
+        {
+            gameController.GameOver();
+        }
     }
 
     public void SetDrag()

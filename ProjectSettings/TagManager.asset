@@ -8,6 +8,7 @@ TagManager:
   - Limit
   - Hill
   - Destructible
+  - GameOver
   layers:
   - Default
   - TransparentFX

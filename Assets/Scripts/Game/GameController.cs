@@ -26,6 +26,9 @@ public class GameController : MonoBehaviour
     public int pushTime = 3;
     private int timer;
 
+    // Scene
+    public GameObject gameOverPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,5 +81,10 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(1f);
             timer -= 1;
         }
+    }
+
+    public void GameOver()
+    {
+        gameOverPanel.SetActive(true);
     }
 }
